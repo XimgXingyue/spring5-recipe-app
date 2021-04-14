@@ -1,10 +1,11 @@
 package guru.springframework.domain;
 
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CategoryTest extends TestCase {
+import static org.junit.Assert.assertEquals;
+
+public class CategoryTest {
   Category category;
 
   @Before
