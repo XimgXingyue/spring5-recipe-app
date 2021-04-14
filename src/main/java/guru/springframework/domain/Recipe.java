@@ -1,6 +1,7 @@
 package guru.springframework.domain;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -8,6 +9,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@EqualsAndHashCode(exclude = {"notes", "ingredient"})
 public class Recipe {
 
   @Id
@@ -20,9 +22,9 @@ public class Recipe {
   private Integer servings;
   private String source;
   private String url;
+
+  @Lob
   private String directions;
-  //todo add
-  //private Difficulty difficulty;
 
   @Lob
   private Byte[] image;
